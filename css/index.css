@@ -1,11 +1,54 @@
+/* BODY STYLING BELOW */
+
 body {
-    background-image: url(../img/hut.jpg);
+    background-image: url(../img/78926.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
+
+/* STYLING FOR THE HEADER BELOW */
 
 h1 {
     text-align: center;
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 45px;
+}
+
+/* STYLING FOR THE NAVBAR BELOW */
+
+.navbar {
+    background-color: white;
+    overflow: hidden;
+}
+  
+.navbar a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-left: 1px solid black;
+}
+  
+.navbar a:hover {
+    background-color: lightblue;
+    color: black;
+}
+  
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.navbar .icon {
+    display: none;
+}
+
+.header {
+  text-align: center;
+  text-decoration: none;
 }

@@ -6,17 +6,16 @@
 body {
     font-size: 120%;
     background: #f8f8ff;
-    background-image: url(../img/Piscina-noche-Green-Garden-Resort.jpg);
-    background-position-y: -600px;
+    background-image: url(../img/cDr2JGj.jpg);
 }
 
 .header {
     width: 30%;
     margin: 50px auto 0px;
     color: black;
-    background: lightgreen;
+    background: lightblue;
     text-align: center;
-    border: 1px solid lightgreen;
+    border: 1px solid lightblue;
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
@@ -26,7 +25,7 @@ form {
     width: 30%;
     margin: 0px auto;
     padding: 10%;
-    border: 1px solid lightgreen;
+    border: 1px solid lightblue;
     background: white;
     border-radius: 10px 10px 10px 10px;
     opacity: 0.9;
@@ -48,14 +47,14 @@ form {
     padding-left: 5px 10px;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid lightgreen;
+    border: 1px solid lightblue;
 }
 
 .btn {
     padding: 10px;
     font-size: 15px;
     color: black;
-    background: lightgreen;
+    background: lightblue;
     border: none;
     border-radius: 5px;
 }
