@@ -4,7 +4,9 @@ body {
     background-image: url(../img/78926.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    color: white;
 }
+
 
 /* STYLING FOR THE HEADER BELOW */
 
@@ -13,6 +15,10 @@ h1 {
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 45px;
+}
+
+h2, h3 {
+    text-align: center;
 }
 
 /* STYLING FOR THE NAVBAR BELOW */
@@ -30,7 +36,6 @@ h1 {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    border-left: 1px solid black;
 }
   
 .navbar a:hover {
@@ -51,4 +56,50 @@ h1 {
 .header {
   text-align: center;
   text-decoration: none;
+}
+
+.hero img {
+    width: 90px;
+    height: 30px;    
+}
+
+/* GRID CONTAINER STYLINg */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 5%;
+  grid-gap: 10%;
+  grid-row-gap: 10vh;
+}
+
+.grid {
+    display: grid;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+img {
+  height: 300px;
+  width: 400px;
+}
+
+.hotel-one {
+    padding: 5% 2% 2% 2%;
+    margin: 0 auto;
+}
+
+.hotel-two {
+    padding: 5% 2% 2% 2%;
+    margin: 0 auto;
+}
+
+.hotel-three {
+    padding: 5% 2% 2% 2%;;
+    margin: 0 auto;
+}
+
+.hotel-four {
+    padding: 5% 2% 2% 2%;
+    margin: 0 auto;
 }

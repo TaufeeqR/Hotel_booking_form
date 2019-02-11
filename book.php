@@ -15,15 +15,7 @@
         Book Your Ideal Hotel
     </h1>
 </div>
-    
-<div class="grid-container">
-    <div class="grid-one">
 
-    </div>
-    <div class="grid-two">
-
-    </div>
-</div>
 
 </body>
 </html>
