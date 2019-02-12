@@ -1,0 +1,56 @@
+.navbar {
+    background-color: black;
+    overflow: hidden;
+}
+  
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.navbar a:hover {
+    background-color: lightblue;
+    color: white;
+}
+  
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.navbar .icon {
+    display: none;
+}
+
+.header {
+  text-align: center;
+  text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid {
+    display: grid;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 45px;
+}
+
+img {
+    height: 500px;
+    width: 500px;
+}
+

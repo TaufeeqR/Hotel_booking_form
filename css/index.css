@@ -7,6 +7,9 @@ body {
     color: white;
 }
 
+ul {
+    list-style-type: none;
+}
 
 /* STYLING FOR THE HEADER BELOW */
 
@@ -19,6 +22,12 @@ h1 {
 
 h2, h3 {
     text-align: center;
+}
+
+.heading {
+    text-align: center;
+    font-size: 35px;
+    margin: 0 0 0 0;
 }
 
 /* STYLING FOR THE NAVBAR BELOW */
@@ -82,6 +91,11 @@ h2, h3 {
 img {
   height: 300px;
   width: 400px;
+}
+
+.hotel-img {
+    position: relative;
+    left: 40px;
 }
 
 .hotel-one {
