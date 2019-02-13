@@ -24,11 +24,11 @@
         </div>
         <div class="input-group">
             <label>Password</label>
-            <input type="text" name="Password_1">
+            <input type="text" name="password_1">
         </div>
         <div class="input-group">
             <label>Confrim Password</label>
-            <input type="text" name="Password_2">
+            <input type="text" name="password_2">
         </div>
         <div class="input-group">
             <button type="submit" name="register" class="btn">Register</button>

@@ -47,8 +47,7 @@
 
                 <h3>Price per night</h3>
                     <ul>
-                        <li>Adult: R500</li>
-                        <li>Children: R300</li>
+                        <li>R500</li>
                     </ul>
             </div>
         </div>
@@ -75,9 +74,7 @@
 
                 <h3>Price per night</h3>
                     <ul>
-                        <li>Adults: R800</li>
-                        <li>Children: R400</li>
-                    </ul>
+                        <li>R800</li>
             </div>
         </div>
 
@@ -101,8 +98,7 @@
 
                 <h3>Price per night</h3>
                     <ul>
-                        <li>Adults: R850</li>
-                        <li>Children: R550</li>
+                        <li>R850</li>
                     </ul>
             </div>
         </div>
@@ -128,8 +124,7 @@
 
                 <h3>Price per night</h3>
                     <ul>
-                        <li>Adults: R850</li>
-                        <li>Children: R450</li>
+                        <li>R850</li>
             </div>
         </div>
     </div>

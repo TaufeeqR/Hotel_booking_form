@@ -1,5 +1,17 @@
 <?php 
 
+// Start a session
+
+session_start();
+
+?>
+
+<?php 
+
+$name = $_SESSION['username'];
+$name = $_SESSION['password_1'];
+$name = $_SESSION['email'];
+$name = $_SESSION['name'];
 
 
 
@@ -49,11 +61,7 @@
                 </div>
 
                 <div class="amount">
-                    <h2>Amount of adults</h2>
-                    <input type="number" name="quantity"
-                    min="0" max="100" step="1" value="">
-
-                    <h2>Amount of children</h2>
+                    <h2>Amount of people</h2>
                     <input type="number" name="quantity"
                     min="0" max="100" step="1" value="">
                 </div>
