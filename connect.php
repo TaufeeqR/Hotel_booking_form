@@ -13,5 +13,11 @@ if ($conn->connect_error) {
 }
     echo "Connection Successful.";
 
+    // Posting to the database
+
+    $Username = $_POST['Username'];
+    $Password = $_POST['Password_1']
+
+    $sql = INSERT INTO users (Username, Email, Password) VALUES ('Username', 'Email', 'Password_1');
 
 ?>

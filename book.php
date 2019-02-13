@@ -1,22 +1,3 @@
-<?php 
-
-// Start a session
-
-session_start();
-
-?>
-
-<?php 
-
-$name = $_SESSION['username'];
-$name = $_SESSION['password_1'];
-$name = $_SESSION['email'];
-$name = $_SESSION['name'];
-
-
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,7 +23,7 @@ $name = $_SESSION['name'];
 
         <div class="header">
             <h1 class="heading">
-                Book Your Ideal Hotel
+                Book A Hotel
             </h1>
         </div>
 
@@ -50,6 +31,7 @@ $name = $_SESSION['name'];
 
         <div class="grid-container">
             <div class="grid">
+            <form action="book.php" method="post">
                 <div class="hotel-drpdwn">
                     <h2>Select Your Hotel</h2>
                     <select name="hotel-list">
@@ -75,6 +57,7 @@ $name = $_SESSION['name'];
                     <h2>Check Out</h2>
                     <input type="date">
                 </div>
+                </form>
             </div>
 
             <div class="grid">
