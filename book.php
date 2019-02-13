@@ -1,3 +1,10 @@
+<?php 
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,9 +23,7 @@
             <a href="book.php">Book Now!</a>
             <a href="register.php">Register</a>
             <a href="login.php" >Sign In</a>
-            <a href="index.php" class="hero">
-                <img src="" alt="logo">
-            </a>
+            <a href="index.php">Home</a>
         </div>
 
         <!-- Main header for the page -->
@@ -43,18 +48,24 @@
                     </select>
                 </div>
 
+                <div class="amount">
+                    <h2>Amount of adults</h2>
+                    <input type="number" name="quantity"
+                    min="0" max="100" step="1" value="">
+
+                    <h2>Amount of children</h2>
+                    <input type="number" name="quantity"
+                    min="0" max="100" step="1" value="">
+                </div>
+
                 <div class="check-in">
                     <h2>Check In</h2>
-                    <select name="hotels">
-                        <option value=""></option>
-                    </select>
+                    <input type="date">
                 </div>
 
                 <div class="check-out">
                     <h2>Check Out</h2>
-                    <select name="hotels">
-                        <option value=""></option>
-                    </select>
+                    <input type="date">
                 </div>
             </div>
 
@@ -63,6 +74,9 @@
                     <img src="img/cDr2JGj.jpg" alt="logo">
                 </div>
             </div>
+
+            <button class="button"><span>Book Now!</span></button>
+
         </div>
 
     </body>

@@ -14,9 +14,7 @@
         <a href="book.php">Book Now!</a>
         <a href="register.php">Register</a>
         <a href="login.php" >Sign In</a>
-        <a href="index.php" class="hero">
-            <img src="" alt="logo">
-        </a>
+        <a href="index.php">Home</a>
     </div>
 
 <!-- Grid containing the different hotels and their features -->
