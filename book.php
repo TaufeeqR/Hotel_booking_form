@@ -29,6 +29,7 @@ $sql = "CREATE TABLE IF NOT EXISTS users(
     $hotel = "";
     $checkin = "";
     $checkout = "";
+    $price = "";
 
 
 
@@ -39,14 +40,37 @@ if (isset($_POST['submit'])) {
     $hotel = $_POST['hotelname'];
     $checkin = $_POST['check-in'];
     $checkout = $_POST['check-out'];
+    $date1 = new DateTime($_POST['check-in']);
+    $date2 = new DateTime($_POST['check-out']);
 
+    // SWITCH STATEMENT
+
+    switch ($hotel) {
+        case ($hotel == "Crystal Hotel"):
+        $price = 500;
+        break;
+
+        case ($hotel == "Cape Lodge"):
+        $price = 800;
+        break;
+
+        case ($hotel == "Hotel Cezar"):
+        $price = 850;
+        break;
+
+        case ($hotel == "Presidente"):
+        $price = 10000;
+        break;
+    }
+
+    // CALCULATIONS
+
+    
 
     $sql = "INSERT INTO users( UserName, UserSurname, Hotelname, Arrival, Departure) VALUES ('$name', '$surname', '$hotel', '$checkin', '$checkout')";
 
     if ($conn->query($sql) ===TRUE) {
-    } else {
-        echo "Error: " .$sql ."<br>" . $conn->error;
-    }
+    };
 }
 
 ?>
@@ -87,14 +111,15 @@ if (isset($_POST['submit'])) {
                 <form action="book.php" method="post">
         
                 First Name:<br>
-                <input type="text" name="username">
+                <input type="text" name="username" required>
                 <br>
                 Surname:<br>
-                <input type="text" name="surname">
+                <input type="text" name="surname" required>
                 
                 <div class="hotel-drpdwn">
                     <h2>Select Your Hotel</h2>
-                    <select name="hotelname">
+                    <select name="hotelname" required>
+                        <option name="" value=""</option>
                         <option name="" value="Crystal Hotel">Crystal Hotel and Spa</option>
                         <option name="" value="Cape Lodge">Cape Lodge Hotel</option>
                         <option name="" value="Hotel Cezar">Hotel Cezar</option>
@@ -103,15 +128,14 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="nights">
-                    <h2>Number of nights</h2>
                     <div class="check-in" >
                         <h3>Check In</h3>
-                        <input type="date" name="check-in">
+                        <input type="date" name="check-in" required>
                     </div>
 
                     <div class="check-out" >
                         <h3>Check Out</h3>
-                        <input type="date" name="check-out">
+                        <input type="date" name="check-out"required>
                     </div>
             </div>
 
@@ -128,7 +152,7 @@ if (isset($_POST['submit'])) {
                     <div class="display">
                     <?php if (isset($_POST['submit'])) {
                         echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br>$checkin <br>until the <br>$checkout";
-                    } ?>
+                    }?>
                     </div>
                 </div>
             </div>
