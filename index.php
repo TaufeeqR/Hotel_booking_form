@@ -12,8 +12,6 @@
 
     <div class="navbar">
         <a href="book.php">Book Now!</a>
-        <a href="register.php">Register</a>
-        <a href="login.php" >Sign In</a>
         <a href="index.php">Home</a>
     </div>
 

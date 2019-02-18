@@ -1,4 +1,4 @@
-<!-- All functions go here and justv include -->
+<!-- All functions go here -->
 <?php
 
 include_once'connect.php';

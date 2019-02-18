@@ -1,3 +1,46 @@
+<?php
+
+include_once 'connect.php';
+
+// CREATE VARIABLE
+
+$sql = "CREATE TABLE IF NOT EXISTS users(
+    id INT(8) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    UserName VARCHAR(64) NOT NULL,
+    UserSurname VARCHAR(64) NOT NULL,
+    Hotelname VARCHAR(64) NOT NULL,
+    Arrival VARCHAR(64) NOT NULL,
+    Departure VARCHAR(64) NOT NULL)";
+
+    if ($conn->query($sql) === TRUE) {} 
+        else {
+        echo "Table not created";
+    }
+
+if (isset($_POST['submit'])) {
+
+    $name = $_POST['username'];
+    $surname = $_POST['surname'];
+    $hotel = $_POST['hotelname'];
+    $checkin = $_POST['check-in'];
+    $checkout = $_POST['check-out'];
+
+
+    $sql = "INSERT INTO users( UserName, UserSurname, Hotelname, Arrival, Departure) VALUES ('$name', '$surname', '$hotel', '$checkin', '$checkout')";
+
+    if ($conn->query($sql) ===TRUE) {
+    } else {
+        echo "Error: " .$sql ."<br>" . $conn->error;
+    }
+}
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,8 +57,6 @@
 
         <div class="navbar">
             <a href="book.php">Book Now!</a>
-            <a href="register.php">Register</a>
-            <a href="login.php" >Sign In</a>
             <a href="index.php">Home</a>
         </div>
 
@@ -32,42 +73,38 @@
         <div class="grid-container">
             <div class="grid">
             <form action="book.php" method="post">
-                <div class="hotel-drpdwn">
-                    <h2>Select Your Hotel</h2>
-                    <select name="hotel-list">
-                        <option name="hotel-one" value="">Crystal hotel and Spa</option>
-                        <option name="hotel-two" value="">Cape Lodge Hotel</option>
-                        <option name="hotel-three" value="">Hotel Cezar</option>
-                        <option name="hotel-four" value="">Presidente Hotel</option>
-                    </select>
-                </div>
+        
+        First Name:<br>
+        <input type="text" name="username">
+        <br>
+        Surname:<br>
+        <input type="text" name="surname">
+        
+        <div class="hotel-drpdwn">
+            <h2>Select Your Hotel</h2>
+            <select name="hotelname">
+                <option name="" value="Crystal Hotel">Crystal Hotel and Spa</option>
+                <option name="" value="Cape Lodge">Cape Lodge Hotel</option>
+                <option name="" value="Hotel Cezar">Hotel Cezar</option>
+                <option name="" value="Presidente">Presidente Hotel</option>
+            </select>
+        </div>
 
-                <div class="amount">
-                    <h2>Amount of people</h2>
-                    <input type="number" name="quantity"
-                    min="0" max="100" step="1" value="">
-                </div>
-
-                <div class="check-in">
-                    <h2>Check In</h2>
-                    <input type="date">
-                </div>
-
-                <div class="check-out">
-                    <h2>Check Out</h2>
-                    <input type="date">
-                </div>
-                </form>
+        <div class="nights">
+            <h2>Number of nights</h2>
+            <div class="check-in" >
+                <h3>Check In</h3>
+                <input type="date" name="check-in">
             </div>
 
-            <div class="grid">
-                <div class="hero-image">
-                    <img src="img/cDr2JGj.jpg" alt="logo">
-                </div>
+            <div class="check-out" >
+                <h3>Check Out</h3>
+                <input type="date" name="check-out">
             </div>
+        </div>
 
-            <button class="button"><span>Book Now!</span></button>
-
+        <button class="button" name="submit"><span>Book Now!</span></button>
+    </form>
         </div>
 
     </body>
