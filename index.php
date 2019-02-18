@@ -10,13 +10,16 @@
     </head>
     <body>
 
+<!-- THE Navbar is situated below -->
+
     <div class="navbar">
         <a href="book.php">Book Now!</a>
         <a href="index.php">Home</a>
     </div>
 
-<!-- Grid containing the different hotels and their features -->
+<!-- Grid containing the different hotels and their features,inside these containers are content such as image tags, paragraphs and list tags -->
 
+<!-- Header container below -->
     <div class="heading">
         <h2>Book A Hotel</h2>
     </div>
@@ -126,6 +129,6 @@
             </div>
         </div>
     </div>
-
+<!-- End of content conatiner -->
     </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+// INCLUDING THE REQUIRED FILE/S
 
 include_once 'connect.php';
 
@@ -13,6 +13,8 @@ $sql = "CREATE TABLE IF NOT EXISTS users(
     Hotelname VARCHAR(64) NOT NULL,
     Arrival VARCHAR(64) NOT NULL,
     Departure VARCHAR(64) NOT NULL)";
+
+// CHECK THE QUERY
 
     if ($conn->query($sql) === TRUE) {} 
         else {
@@ -27,6 +29,7 @@ $sql = "CREATE TABLE IF NOT EXISTS users(
     $hotel = "";
     $checkin = "";
     $checkout = "";
+
 
 
 if (isset($_POST['submit'])) {
@@ -48,10 +51,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-
-
-
-
+<!-- HTML DOCUMENT BELOW WITH FORM -->
 
 <!DOCTYPE html>
 <html>
@@ -115,15 +115,24 @@ if (isset($_POST['submit'])) {
                     </div>
             </div>
 
-            <button class="button" name="submit"><span>Book Now!</span></button>
+                <button class="button" name="submit"><span>Book Now!</span></button>
 
                 </form>
+                <!-- END OF THE FORM -->
             
             </div>
 
+<!-- CONTAINER WHICH DISPLAYS THE BOOKING MADE BY THE USER -->
+
                 <div class="grid">
-                    <?php echo "$name $surname booked $hotel" ?>
+                    <div class="display">
+                    <?php if (isset($_POST['submit'])) {
+                        echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br>$checkin <br>until the <br>$checkout";
+                    } ?>
+                    </div>
                 </div>
             </div>
+<!-- END OF MAIN CONTAINER -->
+
     </body>
 </html>

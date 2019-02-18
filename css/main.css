@@ -3,12 +3,15 @@
     padding: 0px;
 }
 
+/* STYLING FOR THE BODY */
+
 body {
     font-size: 120%;
     background: #f8f8ff;
     background-image: url(../img/cDr2JGj.jpg);
 }
 
+/* STYLING FOR THE HEADER CLASS */
 .header {
     width: 30%;
     margin: 50px auto 0px;
@@ -21,6 +24,7 @@ body {
     padding: 20px;
 }
 
+/* STYLING FOR THE FORM BELOW */
 form {
     width: 30%;
     margin: 0px auto;

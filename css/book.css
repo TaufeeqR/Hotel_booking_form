@@ -1,3 +1,5 @@
+/* STYLING FOR THE NAVBAR */
+
 .navbar {
     background-color: black;
     overflow: hidden;
@@ -33,15 +35,21 @@
   text-decoration: none;
 }
 
+/* STYLING FOR THE MAIN GRID CONTAINER */
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
 }
 
+/* STYLING FOR THE SUB GRID */
+
 .grid {
     display: grid;
 }
+
+/* STYLING FOR MY H1 TAGS */
 
 h1 {
     text-align: center;
@@ -49,6 +57,8 @@ h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 45px;
 }
+
+/* STYLING FOR MY IMAGES */
 
 img {
     height: 550px;
@@ -96,3 +106,7 @@ img {
     opacity: 1;
     right: 0;
   }
+
+  /* RESPONSIVE DESIGN */
+
+  
