@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once 'connect.php';
 
 // CREATE VARIABLE
@@ -16,6 +18,16 @@ $sql = "CREATE TABLE IF NOT EXISTS users(
         else {
         echo "Table not created";
     }
+
+
+// Initializing the variables
+
+    $name = "";
+    $surname = "";
+    $hotel = "";
+    $checkin = "";
+    $checkout = "";
+
 
 if (isset($_POST['submit'])) {
 
@@ -72,40 +84,46 @@ if (isset($_POST['submit'])) {
 
         <div class="grid-container">
             <div class="grid">
-            <form action="book.php" method="post">
+                <form action="book.php" method="post">
         
-        First Name:<br>
-        <input type="text" name="username">
-        <br>
-        Surname:<br>
-        <input type="text" name="surname">
-        
-        <div class="hotel-drpdwn">
-            <h2>Select Your Hotel</h2>
-            <select name="hotelname">
-                <option name="" value="Crystal Hotel">Crystal Hotel and Spa</option>
-                <option name="" value="Cape Lodge">Cape Lodge Hotel</option>
-                <option name="" value="Hotel Cezar">Hotel Cezar</option>
-                <option name="" value="Presidente">Presidente Hotel</option>
-            </select>
-        </div>
+                First Name:<br>
+                <input type="text" name="username">
+                <br>
+                Surname:<br>
+                <input type="text" name="surname">
+                
+                <div class="hotel-drpdwn">
+                    <h2>Select Your Hotel</h2>
+                    <select name="hotelname">
+                        <option name="" value="Crystal Hotel">Crystal Hotel and Spa</option>
+                        <option name="" value="Cape Lodge">Cape Lodge Hotel</option>
+                        <option name="" value="Hotel Cezar">Hotel Cezar</option>
+                        <option name="" value="Presidente">Presidente Hotel</option>
+                    </select>
+                </div>
 
-        <div class="nights">
-            <h2>Number of nights</h2>
-            <div class="check-in" >
-                <h3>Check In</h3>
-                <input type="date" name="check-in">
+                <div class="nights">
+                    <h2>Number of nights</h2>
+                    <div class="check-in" >
+                        <h3>Check In</h3>
+                        <input type="date" name="check-in">
+                    </div>
+
+                    <div class="check-out" >
+                        <h3>Check Out</h3>
+                        <input type="date" name="check-out">
+                    </div>
             </div>
 
-            <div class="check-out" >
-                <h3>Check Out</h3>
-                <input type="date" name="check-out">
+            <button class="button" name="submit"><span>Book Now!</span></button>
+
+                </form>
+            
             </div>
-        </div>
 
-        <button class="button" name="submit"><span>Book Now!</span></button>
-    </form>
-        </div>
-
+                <div class="grid">
+                    <?php echo "$name $surname booked $hotel" ?>
+                </div>
+            </div>
     </body>
 </html>
