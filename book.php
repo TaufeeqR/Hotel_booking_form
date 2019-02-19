@@ -16,7 +16,9 @@ $sql = "CREATE TABLE IF NOT EXISTS users(
 
 // CHECK THE QUERY
 
-    if ($conn->query($sql) === TRUE) {} 
+    if ($conn->query($sql) === TRUE) {
+
+    } 
         else {
         echo "Table not created";
     }
@@ -43,7 +45,7 @@ if (isset($_POST['submit'])) {
     $date1 = strtotime($_POST['check-in']);
     $date2 = strtotime($_POST['check-out']);
 
-    // SWITCH STATEMENT
+    // SWITCH STATEMENT == THE HOTEL PRICES
 
     switch ($hotel) {
         case ($hotel == "Crystal Hotel"):
@@ -83,8 +85,11 @@ if (isset($_POST['submit'])) {
     if ($conn->query($sql) ===TRUE) {};
 }
 
+   
 ?>
 
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- HTML DOCUMENT BELOW WITH FORM -->
 
 <!DOCTYPE html>
@@ -162,7 +167,21 @@ if (isset($_POST['submit'])) {
                     <div class="display">
                     <?php if (isset($_POST['submit'])) {
                         echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br> $checkin <br>until the <br> $checkout for $days nights <br> for the price of <br>R$TotalCost" . '<br><a href="index.php">Return to Home</a> <br><a href="book.php">Make another booking</a>' ;
-                    }?>
+                    } 
+                     // CHECKING FOR DUPLICATES
+
+                    $duplicate = 'SELECT * FROM users WHERE Arrival="$checkin"';
+                    $dupresult = $conn->query($duplicate);
+
+                    
+                    $row_cnt = $dupresult->num_rows;
+
+                    if ($row_cnt > 0) {
+
+                    echo "There is a matching record";
+
+                    }
+                    ?>
                     </div>
                 </div>
             </div>

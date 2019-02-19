@@ -68,11 +68,6 @@ h2, h3 {
   text-decoration: none;
 }
 
-.hero img {
-    width: 90px;
-    height: 30px;    
-}
-
 /* GRID CONTAINER STYLING */
 
 .grid-container {
@@ -117,4 +112,35 @@ img {
 .hotel-four {
     padding: 5% 2% 2% 2%;
     margin: 0 auto;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 360px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 5%;
+        grid-gap: 10%;
+        grid-row-gap: 5vh;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 25px;
+    }
+    .heading {
+        text-align: center;
+        font-size: 15px;
+        margin: 0 0 0 0;
+    }
+
+    .hotel-img {
+        height: auto;
+        width: auto;
+        max-width: 100%;
+    }
+
 }
