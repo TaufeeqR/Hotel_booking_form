@@ -16,6 +16,14 @@ PHP (Hypertext Preprocessor) and for my database and storing data, I used MySQL.
 -Internet Explorer
 ```
 
+## Getting Started
+
+```
+-Install your virtual device hosting software(WAMP/XAMP).
+-Clone the repo to your desktop or Download ZIP file.
+-Use the virtual hosting software to create a virtual host to open the webpage.
+-Open hotel booking form.
+```
 ## Software and Scripts used
 
 ```
