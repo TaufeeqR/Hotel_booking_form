@@ -65,17 +65,22 @@ if (isset($_POST['submit'])) {
 
     // CALCULATIONS
 
+    // CALCULATING THE AMOUNT OF NIGHTS
     $interval = abs($date1 - $date2);
 
     $years = floor($interval / (364*60*60*24));
     $months = floor(($interval - $years *365*60*60*24) / (30*60*60*24));
     $days = floor(($interval - $years *365*60*60*24 - $months *30*60*60*24) / (60*60*24));
+
+    // CALCULATING THE PRICE OF STAY
+
+    $TotalCost = $price * $days;
     
+    // INSERTING USER DATA INTO THE TABLE
 
     $sql = "INSERT INTO users( UserName, UserSurname, Hotelname, Arrival, Departure) VALUES ('$name', '$surname', '$hotel', '$checkin', '$checkout')";
 
-    if ($conn->query($sql) ===TRUE) {
-    };
+    if ($conn->query($sql) ===TRUE) {};
 }
 
 ?>
@@ -156,7 +161,7 @@ if (isset($_POST['submit'])) {
                 <div class="grid">
                     <div class="display">
                     <?php if (isset($_POST['submit'])) {
-                        echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br> $checkin <br>until the <br> $checkout for $days nights <br> for the price of <br>" . '<br><a href="index.php">Return to Home</a> <br><a href="book.php">Make another booking</a>' ;
+                        echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br> $checkin <br>until the <br> $checkout for $days nights <br> for the price of <br>R$TotalCost" . '<br><a href="index.php">Return to Home</a> <br><a href="book.php">Make another booking</a>' ;
                     }?>
                     </div>
                 </div>

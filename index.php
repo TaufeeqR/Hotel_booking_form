@@ -125,7 +125,7 @@
 
                 <h3>Price per night</h3>
                     <ul>
-                        <li>R850</li>
+                        <li>R10000</li>
             </div>
         </div>
     </div>
