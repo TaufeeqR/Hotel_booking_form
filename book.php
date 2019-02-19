@@ -40,8 +40,8 @@ if (isset($_POST['submit'])) {
     $hotel = $_POST['hotelname'];
     $checkin = $_POST['check-in'];
     $checkout = $_POST['check-out'];
-    $date1 = new DateTime($_POST['check-in']);
-    $date2 = new DateTime($_POST['check-out']);
+    $date1 = strtotime($_POST['check-in']);
+    $date2 = strtotime($_POST['check-out']);
 
     // SWITCH STATEMENT
 
@@ -65,6 +65,11 @@ if (isset($_POST['submit'])) {
 
     // CALCULATIONS
 
+    $interval = abs($date1 - $date2);
+
+    $years = floor($interval / (364*60*60*24));
+    $months = floor(($interval - $years *365*60*60*24) / (30*60*60*24));
+    $days = floor(($interval - $years *365*60*60*24 - $months *30*60*60*24) / (60*60*24));
     
 
     $sql = "INSERT INTO users( UserName, UserSurname, Hotelname, Arrival, Departure) VALUES ('$name', '$surname', '$hotel', '$checkin', '$checkout')";
@@ -151,7 +156,7 @@ if (isset($_POST['submit'])) {
                 <div class="grid">
                     <div class="display">
                     <?php if (isset($_POST['submit'])) {
-                        echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br>$checkin <br>until the <br>$checkout" . '<br><a href="index.php">Return to Home</a> <br><a href="book.php">Make another booking</a>' ;
+                        echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br> $checkin <br>until the <br> $checkout for $days nights <br> for the price of <br>" . '<br><a href="index.php">Return to Home</a> <br><a href="book.php">Make another booking</a>' ;
                     }?>
                     </div>
                 </div>
