@@ -111,10 +111,10 @@ if (isset($_POST['submit'])) {
                 <form action="book.php" method="post">
         
                 First Name:<br>
-                <input type="text" name="username" required>
+                <input type="text" name="username" class="firstname" required>
                 <br>
                 Surname:<br>
-                <input type="text" name="surname" required>
+                <input type="text" name="surname" class="surname" required>
                 
                 <div class="hotel-drpdwn">
                     <h2>Select Your Hotel</h2>
@@ -151,7 +151,7 @@ if (isset($_POST['submit'])) {
                 <div class="grid">
                     <div class="display">
                     <?php if (isset($_POST['submit'])) {
-                        echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br>$checkin <br>until the <br>$checkout";
+                        echo "Hello $name $surname, <br>you booked the $hotel <br>from the <br>$checkin <br>until the <br>$checkout" . '<br><a href="index.php">Return to Home</a> <br><a href="book.php">Make another booking</a>' ;
                     }?>
                     </div>
                 </div>

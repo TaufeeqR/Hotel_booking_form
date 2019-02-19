@@ -1,0 +1,123 @@
+/* STYLING FOR THE NAVBAR */
+
+.navbar {
+    background-color: black;
+    overflow: hidden;
+}
+  
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.navbar a:hover {
+    background-color: lightblue;
+    color: white;
+}
+  
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.navbar .icon {
+    display: none;
+}
+
+.header {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* STYLING FOR THE MAIN GRID CONTAINER */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+
+/* STYLING FOR THE SUB GRID */
+
+.grid {
+    display: grid;
+}
+
+/* STYLING FOR MY H1 TAGS */
+
+h1 {
+    text-align: center;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 45px;
+}
+
+/* STYLING FOR MY IMAGES */
+
+img {
+    height: 550px;
+    width: 500px;
+}
+
+/* STYLING FOR THE BOOK NOW BUTTON */
+
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  input[type=text] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #3CBC8D;
+    color: white;
+  }
+
+  /* RESPONSIVE DESIGN */
+
+  
